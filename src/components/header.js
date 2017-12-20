@@ -1,9 +1,11 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { startLogout } from '../actions/auth';
 
-export const Header = ({ startLogout, isAuthenticated, history }) => (
+import { startLogout } from '../actions/auth';
+import { history } from '../routes/app_router';
+
+export const Header = ({ startLogout, isAuthenticated }) => (
 	<header className="header">
 		<div className="content-container">
 			<div className="header__content">

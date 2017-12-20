@@ -11,8 +11,8 @@ class ReadBlogPage extends Component {
 		super(props);
 
 		this.state = {
-			title: 'Placeholder title',
-			body: 'Placeholder body',
+			title: 'Loading title...',
+			body: 'Loading body...',
 			createdAt: 0
 		};
 
@@ -20,7 +20,11 @@ class ReadBlogPage extends Component {
 
 	componentDidMount() {
 		this.props.blog().then((data) => {
-			this.setState(data);
+			if (data) {
+				this.setState(data);
+			} else {
+				this.props.history.push('/postnotfound');
+			}
 		});
 	}
 
@@ -31,11 +35,11 @@ class ReadBlogPage extends Component {
 				<div className="page-header">
 					<div className="content-container">
 						<h1 className="page-header__title">{this.state.title}</h1>
+						<div className="date">{moment(this.state.createdAt).format('LLL')}</div>
 					</div>
 				</div>
 				<div className="content-container">
-					<p>{this.state.body}</p>
-					<div className="date">{moment(this.state.createdAt).format('LLL')}</div>
+					<div dangerouslySetInnerHTML={{__html: this.state.body}}></div>
 				</div>
 			</div>
 		);

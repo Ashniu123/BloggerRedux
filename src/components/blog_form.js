@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
+import ReactQuill from 'react-quill';
+import 'react-quill/dist/quill.snow.css';
 
 export class BlogForm extends Component {
 	constructor(props) {
@@ -35,8 +37,8 @@ export class BlogForm extends Component {
 		this.setState({ title: e.target.value });
 	}
 
-	handleBodyChange(e) {
-		this.setState({ body: e.target.value });
+	handleBodyChange(value) {
+		this.setState({ body: value });
 	}
 
 	render() {
@@ -44,7 +46,7 @@ export class BlogForm extends Component {
 			<form className="form" onSubmit={this.handleFormSubmit}>
 				{this.state.error && <p className="form__error">{this.state.error}</p>}
 				<input className="text-input" type="text" placeholder="Post Title" value={this.state.title} onChange={this.handleTitleChange} autoFocus />
-				<textarea style={{height: 300}} className="text-input" type="text" placeholder="Post Body" value={this.state.body} onChange={this.handleBodyChange}></textarea>
+				<ReactQuill value={this.state.body} onChange={this.handleBodyChange} />
 				<input className="button" type="submit" value="Save Post" />
 			</form>
 		);
