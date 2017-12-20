@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import BlogListItem from './blog_list_item';
 import selectBlogs from '../selectors/blogs';
 
-const BlogList = (props) => (
+export const BlogList = (props) => (
 	<div className="content-container">
 		<div className="list-header">
 			<div className="show-for-mobile">Blogs</div>

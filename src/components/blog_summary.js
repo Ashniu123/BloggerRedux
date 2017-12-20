@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 import selectBlogs from '../selectors/blogs';
 
-const BlogSummary = (props) => (
+export const BlogSummary = (props) => (
 	<div className="page-header">
 		<div className="content-container">
 			<h3 className="page-header__title align-left">

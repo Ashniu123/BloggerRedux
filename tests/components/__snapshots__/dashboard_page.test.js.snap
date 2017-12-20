@@ -2,6 +2,8 @@
 
 exports[`should render DashboardPage correctly 1`] = `
 <div>
-  Dashboard page content
+  <Connect(BlogSummary) />
+  <Connect(BlogListFilters) />
+  <Connect(BlogList) />
 </div>
 `;

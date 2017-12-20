@@ -1,0 +1,67 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should render BlogForm correctly 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post Title"
+    type="text"
+    value=""
+  />
+  <textarea
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post Body"
+    style={
+      Object {
+        "height": 300,
+      }
+    }
+    type="text"
+    value=""
+  />
+  <input
+    className="button"
+    type="submit"
+    value="Save Post"
+  />
+</form>
+`;
+
+exports[`should render BlogForm correctly with blog data 1`] = `
+<form
+  className="form"
+  onSubmit={[Function]}
+>
+  <input
+    autoFocus={true}
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post Title"
+    type="text"
+    value="Write a Angular app"
+  />
+  <textarea
+    className="text-input"
+    onChange={[Function]}
+    placeholder="Post Body"
+    style={
+      Object {
+        "height": 300,
+      }
+    }
+    type="text"
+    value="Directives, Lazy Load"
+  />
+  <input
+    className="button"
+    type="submit"
+    value="Save Post"
+  />
+</form>
+`;

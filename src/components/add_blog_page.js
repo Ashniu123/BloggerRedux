@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import BlogForm from './blog_form';
 import { startAddBlog } from '../actions/blogs';
 
-class AddBlogPage extends Component {
+export class AddBlogPage extends Component {
 	constructor(props) {
 		super(props);
 

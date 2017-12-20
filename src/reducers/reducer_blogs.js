@@ -1,4 +1,4 @@
-import { ADD_BLOG, EDIT_BLOG, REMOVE_BLOG, SET_BLOG } from '../actions/blogs';
+import { ADD_BLOG, EDIT_BLOG, REMOVE_BLOG, SET_BLOG, GET_BLOG } from '../actions/blogs';
 
 const blogsReducerDefaultState = [];
 
@@ -24,6 +24,11 @@ export default (state = blogsReducerDefaultState, action) => {
 		return state.filter(({ id }) => id !== action.id);
 	case SET_BLOG:
 		return action.blogs;
+	case GET_BLOG: 
+		return [
+			...state,
+			action.blog
+		];
 	default:
 		return state;
 	}

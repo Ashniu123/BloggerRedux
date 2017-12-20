@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import moment from 'moment';
 
-class BlogForm extends Component {
+export class BlogForm extends Component {
 	constructor(props) {
 		super(props);
 

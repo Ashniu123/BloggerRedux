@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import BlogForm from './blog_form';
 import { startEditBlog, startRemoveBlog } from '../actions/blogs';
 
-class EditBlogPage extends Component {
+export class EditBlogPage extends Component {
 	constructor(props) {
 		super(props);
 

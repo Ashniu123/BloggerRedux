@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { Link } from 'react-router-dom';
 import moment from 'moment';
 
-const BlogListItem = ({ id, title, createdAt }) => (
+export const BlogListItem = ({ id, title, createdAt }) => (
 	<Link className="list-item" to={`/edit/${id}`}>
 		<div>
 			<h4 className="list-item__title">{title}</h4>
