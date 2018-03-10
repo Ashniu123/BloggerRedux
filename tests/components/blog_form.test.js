@@ -38,11 +38,8 @@ test('should set title on input change', () => {
 
 test('should set body on textarea change', () => {
 	const wrapper = shallow(<BlogForm />);
-	const value = 'blah';
-
-	wrapper.find('textarea').at(0).simulate('change', {
-		target: { value }
-	});
+	const value = '<p>blah</p>';
+	wrapper.find('Quill').at(0).simulate('change', value);
 
 	expect(wrapper.state('body')).toBe(value);
 });

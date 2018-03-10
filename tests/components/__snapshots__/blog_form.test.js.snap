@@ -13,16 +13,10 @@ exports[`should render BlogForm correctly 1`] = `
     type="text"
     value=""
   />
-  <textarea
-    className="text-input"
+  <Quill
+    modules={Object {}}
     onChange={[Function]}
-    placeholder="Post Body"
-    style={
-      Object {
-        "height": 300,
-      }
-    }
-    type="text"
+    theme="snow"
     value=""
   />
   <input
@@ -46,16 +40,10 @@ exports[`should render BlogForm correctly with blog data 1`] = `
     type="text"
     value="Write a Angular app"
   />
-  <textarea
-    className="text-input"
+  <Quill
+    modules={Object {}}
     onChange={[Function]}
-    placeholder="Post Body"
-    style={
-      Object {
-        "height": 300,
-      }
-    }
-    type="text"
+    theme="snow"
     value="Directives, Lazy Load"
   />
   <input

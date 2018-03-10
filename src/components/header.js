@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { startLogout } from '../actions/auth';
 import { history } from '../routes/app_router';
 
-export const Header = ({ startLogout, isAuthenticated }) => (
+export const Header = ({ startLogout, isAuthenticated, history }) => (
 	<header className="header">
 		<div className="content-container">
 			<div className="header__content">
