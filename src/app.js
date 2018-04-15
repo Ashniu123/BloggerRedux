@@ -11,13 +11,13 @@ import reducers from './reducers';
 import { startSetBlogs } from './actions/blogs';
 import { login, logout } from './actions/auth';
 
+import registerServiceWorker from './registerServiceWorker';
+
 import { firebase } from './firebase/firebase';
 
 import '../styles/styles.scss';
 
 const store = createStore(reducers, applyMiddleware(thunk)); // create store with middleware
-
-ReactDOM.render(<LoadingPage />, document.getElementById('root'));
 
 let hasRendered = false;
 const renderApp = () => {
@@ -31,9 +31,7 @@ const renderApp = () => {
 	}
 };
 
-setTimeout(() => {
-	renderApp();
-}, 3000);
+registerServiceWorker();
 
 firebase.auth().onAuthStateChanged((user) => {
 	if (user) {
