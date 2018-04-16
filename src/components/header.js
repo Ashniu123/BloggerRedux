@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 
 import { startLogout } from '../actions/auth';
-import { history } from '../routes/app_router';
 
 export const Header = ({ startLogout, isAuthenticated, history }) => (
 	<header className="header">
